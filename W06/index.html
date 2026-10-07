@@ -1,423 +1,1151 @@
 <!DOCTYPE html>
-<html>
-<head> 
-    <title>HTML TEXT Basic Page</title>
-</head>
-<body> 
-    <h1>제목 글자 태그 1</h1> 
-    <h2>제목 글자 태그 2</h2> 
-    <h3>제목 글자 태그 3</h3> 
-    <h4>제목 글자 태그 4</h4> 
-    <h5>제목 글자 태그 5</h5> 
-    <h6>제목 글자 태그 6</h6>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<head> 
-    <title>HTML TEXT Basic Page</title>
-</head>
-<body> 
-    <h1>제목 글자</h1> 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
-    <p>Phasellus sem tortor, volutpat vitae euismod eget</p>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<head> 
-    <title>HTML TEXT Basic Page</title>
-</head>
-<body> 
-    <a href="http://www.hanbit.co.kr">한빛미디어</a><br> 
-    <a href="http://www.naver.com/">네이버</a><br> 
-    <a href="http://www.daum.net/">다음</a><br>
-</body>
-</html>
-
-<div class="directory_box _list_area"> 
-    <a class="directory_list _qna_list"> 
-        <li><a href="#">전체</a></li> 
-        <li><a href="#">교육, 학문</a></li> 
-        <li><a href="#">컴퓨터통신</a></li> 
-        <li><a href="#">엔터테인먼트, 예술</a></li> 
-        <li><a href="#">생활</a></li> 
-        <li><a href="#">건강</a></li> 
-    </ul>
-</div>
-
-<body> 
-    <ul> 
-        <li>사과</li> 
-        <li>바나나</li> 
-        <li>오렌지</li> 
-    </ul>
-</body>
-
-<body> 
-    <table border="1"> 
-        <tr> 
-            <th colspan="2">지역별 홍차</th> 
-        </tr> 
-        <tr> 
-            <th rowspan="3">중국</th> 
-            <td>정산소종</td> 
-        </tr> 
-        <tr><td>기문</td></tr> 
-        <tr><td>운남</td></tr> 
-        <tr> 
-            <th rowspan="4">인도 및 스리랑카</th> 
-            <td>아삼</td> 
-        </tr> 
-        <tr><td>실론</td></tr> 
-        <tr><td>다질링</td></tr> 
-        <tr><td>닐기리</td></tr> 
-    </table>
-</body>
-
-<body> 
-    <img src=”https://share.google/images/af1nRD7z3lhL5oTHk" alt="펭귄" width="300"> 
-    <img src="Nothing" alt="그림이 존재하지 않습니다."width="300">
-</body>
-
-<!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-    <title>CSS3 Selector Basic</title>
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>웹개발 6주차 과제</title>
+  <style>
+    :root { --line:#d0d7de; --bar:#f6f8fa; --ink:#1f2328; --sub:#59636e; --accent:#04aa6d; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:#fff; color:var(--ink);
+      font-family: "Pretendard", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; line-height:1.6; }
+    main { max-width:1200px; margin:0 auto; padding:32px 16px 80px; }
+    header.cover { border-bottom:2px solid var(--ink); padding-bottom:20px; margin-bottom:28px; }
+    header.cover h1 { margin:0 0 6px; font-size:28px; }
+    header.cover p { margin:0; color:var(--sub); }
+    nav h2 { font-size:18px; margin:0 0 8px; }
+    nav ol { margin:0 0 40px; padding-left:20px; columns:2; column-gap:32px; }
+    nav a { color:var(--ink); }
+    section { margin:0 0 48px; scroll-margin-top:16px; }
+    section h2 { font-size:18px; margin:0 0 10px; padding-left:10px; border-left:4px solid var(--accent); }
+    .pair { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .panel { border:1px solid var(--line); border-radius:6px; overflow:hidden; display:flex; flex-direction:column; min-width:0; }
+    .bar { background:var(--bar); border-bottom:1px solid var(--line); padding:6px 12px; font-size:13px;
+      color:var(--sub); display:flex; justify-content:space-between; }
+    .bar a { color:var(--sub); }
+    pre { margin:0; padding:12px; overflow:auto; font-size:13px; line-height:1.5; flex:1;
+      font-family: Consolas, "D2Coding", monospace; background:#fff; }
+    iframe { width:100%; min-height:220px; border:0; flex:1; background:#fff; }
+    @media (max-width: 760px) { .pair { grid-template-columns:1fr; } nav ol { columns:1; } }
+  </style>
+</head>
+<body>
+<main>
+  <header class="cover">
+    <h1>웹개발 6주차 과제</h1>
+    <p>빅데이터학과 2601926 김세란</p>
+  </header>
+  <nav>
+    <h2>목차</h2>
+    <ol>
+      <li><a href="#m1-1">미션1-1) 제목과 본문 글자 태그</a></li>
+      <li><a href="#m1-2">미션1-2) 제목과 본문 글자 태그</a></li>
+      <li><a href="#m2-1">미션2-1) 앵커태그</a></li>
+      <li><a href="#m2-2">미션2-2) 앵커태그</a></li>
+      <li><a href="#m3-1">미션3-1) 순서가 없는 기본 목록</a></li>
+      <li><a href="#m3-2">미션3-2) 순서가 있는 기본 목록 (ul 태그를 ol 태그로 바꿈)</a></li>
+      <li><a href="#m4">미션4) 표 만들기</a></li>
+      <li><a href="#m5">미션5) 이미지 첨부 _ 펭귄이미지가 나타나지 않음 (유효하지 않은 링크)</a></li>
+      <li><a href="#m6-1">미션6-1) 기본(default 값)에 CSS 입력</a></li>
+      <li><a href="#m6-2">미션6-2) CSS 활용 _ 제목, 본문 모두 빨간글자</a></li>
+      <li><a href="#m6-3">미션6-3) CSS _ h1→빨간글자, p→파란글자</a></li>
+      <li><a href="#m6-4">미션6-4) CSS 응용 _ 아이디 선택자</a></li>
+      <li><a href="#m6-5">미션6-5) CSS 응용 _ 클래스 선택자</a></li>
+      <li><a href="#m6-6">미션6-6) CSS 응용 _ 여러 클래스 적용</a></li>
+      <li><a href="#m7-1">미션7-1) 박스 크기와 패딩 조정 _ width와 height 속성 적용하기</a></li>
+      <li><a href="#m7-2">미션7-2) 박스 크기와 패딩 조정 _ margin과 padding 속성 적용하기</a></li>
+      <li><a href="#m8">미션8) 기본 박스 테두리 만들기</a></li>
+      <li><a href="#m9-1">미션9-1) display 속성 _ none 적용하기</a></li>
+      <li><a href="#m9-2">미션9-2) display 속성 _ block 적용하기</a></li>
+      <li><a href="#m10-1">미션10-1) 요소의 고정 위치와 상대 위치 지정 _ absolute 키워드 적용하기</a></li>
+      <li><a href="#m10-2">미션10-2) 요소의 고정 위치와 상대 위치 지정 _ left 속성과 top 속성 적용하기</a></li>
+      <li><a href="#m10-3">미션10-3) 요소의 고정 위치와 상대 위치 지정 _ z-index 속성 적용하기</a></li>
+    </ol>
+  </nav>
+  <section id="m1-1">
+    <h2>미션1-1) 제목과 본문 글자 태그</h2>
+    <div class="pair">
+      <div class="panel">
+        <div class="bar">소스 코드</div>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;HTML TEXT Basic Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;제목 글자 태그 1&lt;/h1&gt;
+    &lt;h2&gt;제목 글자 태그 2&lt;/h2&gt;
+    &lt;h3&gt;제목 글자 태그 3&lt;/h3&gt;
+    &lt;h4&gt;제목 글자 태그 4&lt;/h4&gt;
+    &lt;h5&gt;제목 글자 태그 5&lt;/h5&gt;
+    &lt;h6&gt;제목 글자 태그 6&lt;/h6&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+      <div class="panel">
+        <div class="bar">실행 결과</div>
+        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;HTML TEXT Basic Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;제목 글자 태그 1&lt;/h1&gt;
+    &lt;h2&gt;제목 글자 태그 2&lt;/h2&gt;
+    &lt;h3&gt;제목 글자 태그 3&lt;/h3&gt;
+    &lt;h4&gt;제목 글자 태그 4&lt;/h4&gt;
+    &lt;h5&gt;제목 글자 태그 5&lt;/h5&gt;
+    &lt;h6&gt;제목 글자 태그 6&lt;/h6&gt;
+&lt;/body&gt;
+&lt;/html&gt;" title="미션1-1 실행 결과"></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="m1-2">
+    <h2>미션1-2) 제목과 본문 글자 태그</h2>
+    <div class="pair">
+      <div class="panel">
+        <div class="bar">소스 코드</div>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;HTML TEXT Basic Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;제목 글자&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+    &lt;p&gt;Phasellus sem tortor, volutpat vitae euismod eget&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+      <div class="panel">
+        <div class="bar">실행 결과</div>
+        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;HTML TEXT Basic Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;제목 글자&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+    &lt;p&gt;Phasellus sem tortor, volutpat vitae euismod eget&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;" title="미션1-2 실행 결과"></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="m2-1">
+    <h2>미션2-1) 앵커태그</h2>
+    <div class="pair">
+      <div class="panel">
+        <div class="bar">소스 코드</div>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;HTML TEXT Basic Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;a href=&quot;http://www.hanbit.co.kr&quot;&gt;한빛미디어&lt;/a&gt;&lt;br&gt;
+    &lt;a href=&quot;http://www.naver.com/&quot;&gt;네이버&lt;/a&gt;&lt;br&gt;
+    &lt;a href=&quot;http://www.daum.net/&quot;&gt;다음&lt;/a&gt;&lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+      <div class="panel">
+        <div class="bar">실행 결과</div>
+        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;HTML TEXT Basic Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;a href=&quot;http://www.hanbit.co.kr&quot;&gt;한빛미디어&lt;/a&gt;&lt;br&gt;
+    &lt;a href=&quot;http://www.naver.com/&quot;&gt;네이버&lt;/a&gt;&lt;br&gt;
+    &lt;a href=&quot;http://www.daum.net/&quot;&gt;다음&lt;/a&gt;&lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;" title="미션2-1 실행 결과"></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="m2-2">
+    <h2>미션2-2) 앵커태그</h2>
+    <div class="pair">
+      <div class="panel">
+        <div class="bar">소스 코드</div>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;HTML TEXT Basic Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;directory_box _list_area&quot;&gt;
+        &lt;ul class=&quot;directory_list _qna_list&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;전체&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;교육, 학문&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;컴퓨터통신&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;엔터테인먼트, 예술&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;생활&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;건강&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+      <div class="panel">
+        <div class="bar">실행 결과</div>
+        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;HTML TEXT Basic Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;directory_box _list_area&quot;&gt;
+        &lt;ul class=&quot;directory_list _qna_list&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;전체&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;교육, 학문&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;컴퓨터통신&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;엔터테인먼트, 예술&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;생활&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;건강&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;" title="미션2-2 실행 결과"></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="m3-1">
+    <h2>미션3-1) 순서가 없는 기본 목록</h2>
+    <div class="pair">
+      <div class="panel">
+        <div class="bar">소스 코드</div>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;HTML List Basic Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;ul&gt;
+        &lt;li&gt;사과&lt;/li&gt;
+        &lt;li&gt;바나나&lt;/li&gt;
+        &lt;li&gt;오렌지&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+      <div class="panel">
+        <div class="bar">실행 결과</div>
+        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;HTML List Basic Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;ul&gt;
+        &lt;li&gt;사과&lt;/li&gt;
+        &lt;li&gt;바나나&lt;/li&gt;
+        &lt;li&gt;오렌지&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;" title="미션3-1 실행 결과"></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="m3-2">
+    <h2>미션3-2) 순서가 있는 기본 목록 (ul 태그를 ol 태그로 바꿈)</h2>
+    <div class="pair">
+      <div class="panel">
+        <div class="bar">소스 코드</div>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;HTML List Basic Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;ol&gt;
+        &lt;li&gt;사과&lt;/li&gt;
+        &lt;li&gt;바나나&lt;/li&gt;
+        &lt;li&gt;오렌지&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+      <div class="panel">
+        <div class="bar">실행 결과</div>
+        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;HTML List Basic Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;ol&gt;
+        &lt;li&gt;사과&lt;/li&gt;
+        &lt;li&gt;바나나&lt;/li&gt;
+        &lt;li&gt;오렌지&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/body&gt;
+&lt;/html&gt;" title="미션3-2 실행 결과"></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="m4">
+    <h2>미션4) 표 만들기</h2>
+    <div class="pair">
+      <div class="panel">
+        <div class="bar">소스 코드</div>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;HTML Table Basic Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;table border=&quot;1&quot;&gt;
+        &lt;tr&gt;
+            &lt;th colspan=&quot;2&quot;&gt;지역별 홍차&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th rowspan=&quot;3&quot;&gt;중국&lt;/th&gt;
+            &lt;td&gt;정산소종&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;기문&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;운남&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th rowspan=&quot;4&quot;&gt;인도 및 스리랑카&lt;/th&gt;
+            &lt;td&gt;아삼&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;실론&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;다질링&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;닐기리&lt;/td&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+      <div class="panel">
+        <div class="bar">실행 결과</div>
+        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;HTML Table Basic Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;table border=&quot;1&quot;&gt;
+        &lt;tr&gt;
+            &lt;th colspan=&quot;2&quot;&gt;지역별 홍차&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th rowspan=&quot;3&quot;&gt;중국&lt;/th&gt;
+            &lt;td&gt;정산소종&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;기문&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;운남&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th rowspan=&quot;4&quot;&gt;인도 및 스리랑카&lt;/th&gt;
+            &lt;td&gt;아삼&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;실론&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;다질링&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;닐기리&lt;/td&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;" title="미션4 실행 결과"></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="m5">
+    <h2>미션5) 이미지 첨부 _ 펭귄이미지가 나타나지 않음 (유효하지 않은 링크)</h2>
+    <div class="pair">
+      <div class="panel">
+        <div class="bar">소스 코드</div>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;HTML Image Basic Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;img src=&quot;https://share.google/images/af1nRD7z3lhL5oTHk&quot; alt=&quot;펭귄&quot; width=&quot;300&quot;&gt;
+    &lt;img src=&quot;Nothing&quot; alt=&quot;그림이 존재하지 않습니다.&quot; width=&quot;300&quot;&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+      <div class="panel">
+        <div class="bar">실행 결과</div>
+        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;HTML Image Basic Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;img src=&quot;https://share.google/images/af1nRD7z3lhL5oTHk&quot; alt=&quot;펭귄&quot; width=&quot;300&quot;&gt;
+    &lt;img src=&quot;Nothing&quot; alt=&quot;그림이 존재하지 않습니다.&quot; width=&quot;300&quot;&gt;
+&lt;/body&gt;
+&lt;/html&gt;" title="미션5 실행 결과"></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="m6-1">
+    <h2>미션6-1) 기본(default 값)에 CSS 입력</h2>
+    <div class="pair">
+      <div class="panel">
+        <div class="bar">소스 코드</div>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS3 Selector Basic&lt;/title&gt;
+    &lt;style&gt;
         h1 {
             color: red;
             background-color: orange;
         }
-</style>
-</head>
-<body>
-    <h1>CSS3 선택자 기본</h1>
-</body>
-</html>
-
-!DOCTYPE html>
-<html>
-<head>
-    <title>CSS3 Selector Basic</title>
-    <style>
-        * { color: red; }
-    </style>
-</head>
-<body>
-    <h1>제목 글자</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>CSS3 Selector Basic</title>
-    <style>
-	h1 { color: red; }
- 	p { color: blue; }
-    </style>
-</head>
-<body>
-    <h1>제목 글자</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    <p>Nunc nisl turpis, aliquet et gravida non, facilisis a sem.</p>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>CSS3 Selector Basic</title>
-    <style>
- 	#header {
- 	   width: 800px; margin: 0 auto;
- 	   background: red;
- 	}
- 	#wrap {
- 	   width: 800px; margin: 0 auto;
- 	   overflow: hidden;
- 	}
- 	#aside {
- 	   width: 200px; float: left;
- 	   background: blue;
- 	}
- 	#content {
- 	   width: 600px; float: left;
- 	   background: green;
- 	}
-   </style>
-</head>
-<body>
-   <div id="header">
-      <h1>#header 태그</h1>
-   </div>
-   <div id="wrap">
-      <div id="aside">
-         <h1>#aside 태그</h1>
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;CSS3 선택자 기본&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
       </div>
-      <div id="content">
-         <h1>#content 태그</h1>
+      <div class="panel">
+        <div class="bar">실행 결과</div>
+        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS3 Selector Basic&lt;/title&gt;
+    &lt;style&gt;
+        h1 {
+            color: red;
+            background-color: orange;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;CSS3 선택자 기본&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;" title="미션6-1 실행 결과"></iframe>
       </div>
-   </div>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>CSS3 Selector Basic</title>
-    <style>
- 	.select { color: red; }
-    </style>
-</head>
-<body>
-    <ul>
- 	<li class="select">사과</li>
- 	<li>바나나</li>
- 	<li class="select">오렌지</li>
- 	<li>감</li>
-    </ul>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>CSS3 Selector Basic</title>
-    <style>
- 	.item { color: red; }
- 	.header { background-color: blue; }
-    </style>
-</head>
-</head>
-<body>
-    <h1 class="item header">동해물과 백두산이</h1> 
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>CSS Property Basic</title>
-    <style>
- div {
- 	width: 100px; height: 100px;
- 	background-color: red;
- }    
-    </style>
-</head>
-<body>
-    <div></div>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>CSS Property Basic</title>
-    <style>
- div {
- 	width: 100px; height: 100px;
- 	background-color: red;
- }    
-    </style>
-</head>
-<body>
-    <div></div>
-</body>
-</html>
-
-<style>
-    div {
-        width: 100px; height: 100px;
-        background-color: red;
- 
-        border: 20px solid black;
-        margin: 10px; padding: 30px;
-    }
-</style>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>CSS3 Property Basic</title>
-    <style>
- .box {
- border-width: thick;
- border-style: dashed;
- border-color: black;
- }
-    </style>
-</head>
-<body>
-    <div class="box">
- 	<h1>Lorem ipsum dolor amet</h1>
     </div>
+  </section>
+  <section id="m6-2">
+    <h2>미션6-2) CSS 활용 _ 제목, 본문 모두 빨간글자</h2>
+    <div class="pair">
+      <div class="panel">
+        <div class="bar">소스 코드</div>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS3 Selector Basic&lt;/title&gt;
+    &lt;style&gt;
+        * { color: red; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;제목 글자&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+      <div class="panel">
+        <div class="bar">실행 결과</div>
+        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS3 Selector Basic&lt;/title&gt;
+    &lt;style&gt;
+        * { color: red; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;제목 글자&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;" title="미션6-2 실행 결과"></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="m6-3">
+    <h2>미션6-3) CSS _ h1→빨간글자, p→파란글자</h2>
+    <div class="pair">
+      <div class="panel">
+        <div class="bar">소스 코드</div>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS3 Selector Basic&lt;/title&gt;
+    &lt;style&gt;
+        h1 { color: red; }
+        p { color: blue; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;제목 글자&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+    &lt;p&gt;Nunc nisl turpis, aliquet et gravida non, facilisis a sem.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+      <div class="panel">
+        <div class="bar">실행 결과</div>
+        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS3 Selector Basic&lt;/title&gt;
+    &lt;style&gt;
+        h1 { color: red; }
+        p { color: blue; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;제목 글자&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+    &lt;p&gt;Nunc nisl turpis, aliquet et gravida non, facilisis a sem.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;" title="미션6-3 실행 결과"></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="m6-4">
+    <h2>미션6-4) CSS 응용 _ 아이디 선택자</h2>
+    <div class="pair">
+      <div class="panel">
+        <div class="bar">소스 코드</div>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS3 Selector Basic&lt;/title&gt;
+    &lt;style&gt;
+        #header {
+            width: 800px; margin: 0 auto;
+            background: red;
+        }
+        #wrap {
+            width: 800px; margin: 0 auto;
+            overflow: hidden;
+        }
+        #aside {
+            width: 200px; float: left;
+            background: blue;
+        }
+        #content {
+            width: 600px; float: left;
+            background: green;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;header&quot;&gt;
+        &lt;h1&gt;#header 태그&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;wrap&quot;&gt;
+        &lt;div id=&quot;aside&quot;&gt;
+            &lt;h1&gt;#aside 태그&lt;/h1&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;content&quot;&gt;
+            &lt;h1&gt;#content 태그&lt;/h1&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+      <div class="panel">
+        <div class="bar">실행 결과</div>
+        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS3 Selector Basic&lt;/title&gt;
+    &lt;style&gt;
+        #header {
+            width: 800px; margin: 0 auto;
+            background: red;
+        }
+        #wrap {
+            width: 800px; margin: 0 auto;
+            overflow: hidden;
+        }
+        #aside {
+            width: 200px; float: left;
+            background: blue;
+        }
+        #content {
+            width: 600px; float: left;
+            background: green;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;header&quot;&gt;
+        &lt;h1&gt;#header 태그&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;wrap&quot;&gt;
+        &lt;div id=&quot;aside&quot;&gt;
+            &lt;h1&gt;#aside 태그&lt;/h1&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;content&quot;&gt;
+            &lt;h1&gt;#content 태그&lt;/h1&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;" title="미션6-4 실행 결과"></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="m6-5">
+    <h2>미션6-5) CSS 응용 _ 클래스 선택자</h2>
+    <div class="pair">
+      <div class="panel">
+        <div class="bar">소스 코드</div>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS3 Selector Basic&lt;/title&gt;
+    &lt;style&gt;
+        .select { color: red; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;ul&gt;
+        &lt;li class=&quot;select&quot;&gt;사과&lt;/li&gt;
+        &lt;li&gt;바나나&lt;/li&gt;
+        &lt;li class=&quot;select&quot;&gt;오렌지&lt;/li&gt;
+        &lt;li&gt;감&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+      <div class="panel">
+        <div class="bar">실행 결과</div>
+        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS3 Selector Basic&lt;/title&gt;
+    &lt;style&gt;
+        .select { color: red; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;ul&gt;
+        &lt;li class=&quot;select&quot;&gt;사과&lt;/li&gt;
+        &lt;li&gt;바나나&lt;/li&gt;
+        &lt;li class=&quot;select&quot;&gt;오렌지&lt;/li&gt;
+        &lt;li&gt;감&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;" title="미션6-5 실행 결과"></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="m6-6">
+    <h2>미션6-6) CSS 응용 _ 여러 클래스 적용</h2>
+    <div class="pair">
+      <div class="panel">
+        <div class="bar">소스 코드</div>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS3 Selector Basic&lt;/title&gt;
+    &lt;style&gt;
+        .item { color: red; }
+        .header { background-color: blue; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1 class=&quot;item header&quot;&gt;동해물과 백두산이&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+      <div class="panel">
+        <div class="bar">실행 결과</div>
+        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS3 Selector Basic&lt;/title&gt;
+    &lt;style&gt;
+        .item { color: red; }
+        .header { background-color: blue; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1 class=&quot;item header&quot;&gt;동해물과 백두산이&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;" title="미션6-6 실행 결과"></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="m7-1">
+    <h2>미션7-1) 박스 크기와 패딩 조정 _ width와 height 속성 적용하기</h2>
+    <div class="pair">
+      <div class="panel">
+        <div class="bar">소스 코드</div>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS Property Basic&lt;/title&gt;
+    &lt;style&gt;
+        div {
+            width: 100px; height: 100px;
+            background-color: red;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+      <div class="panel">
+        <div class="bar">실행 결과</div>
+        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS Property Basic&lt;/title&gt;
+    &lt;style&gt;
+        div {
+            width: 100px; height: 100px;
+            background-color: red;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;" title="미션7-1 실행 결과"></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="m7-2">
+    <h2>미션7-2) 박스 크기와 패딩 조정 _ margin과 padding 속성 적용하기</h2>
+    <div class="pair">
+      <div class="panel">
+        <div class="bar">소스 코드</div>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS Property Basic&lt;/title&gt;
+    &lt;style&gt;
+        div {
+            width: 100px; height: 100px;
+            background-color: red;
+            border: 20px solid black;
+            margin: 10px; padding: 30px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+      <div class="panel">
+        <div class="bar">실행 결과</div>
+        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS Property Basic&lt;/title&gt;
+    &lt;style&gt;
+        div {
+            width: 100px; height: 100px;
+            background-color: red;
+            border: 20px solid black;
+            margin: 10px; padding: 30px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;" title="미션7-2 실행 결과"></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="m8">
+    <h2>미션8) 기본 박스 테두리 만들기</h2>
+    <div class="pair">
+      <div class="panel">
+        <div class="bar">소스 코드</div>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS3 Property Basic&lt;/title&gt;
+    &lt;style&gt;
+        .box {
+            border-width: thick;
+            border-style: dashed;
+            border-color: black;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;box&quot;&gt;
+        &lt;h1&gt;Lorem ipsum dolor amet&lt;/h1&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+      <div class="panel">
+        <div class="bar">실행 결과</div>
+        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS3 Property Basic&lt;/title&gt;
+    &lt;style&gt;
+        .box {
+            border-width: thick;
+            border-style: dashed;
+            border-color: black;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;box&quot;&gt;
+        &lt;h1&gt;Lorem ipsum dolor amet&lt;/h1&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;" title="미션8 실행 결과"></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="m9-1">
+    <h2>미션9-1) display 속성 _ none 적용하기</h2>
+    <div class="pair">
+      <div class="panel">
+        <div class="bar">소스 코드</div>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS3 Display Property&lt;/title&gt;
+    &lt;style&gt;
+        #box {
+            display: none;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;span&gt;더미 객체&lt;/span&gt;
+    &lt;div id=&quot;box&quot;&gt;대상 객체&lt;/div&gt;
+    &lt;span&gt;더미 객체&lt;/span&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+      <div class="panel">
+        <div class="bar">실행 결과</div>
+        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS3 Display Property&lt;/title&gt;
+    &lt;style&gt;
+        #box {
+            display: none;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;span&gt;더미 객체&lt;/span&gt;
+    &lt;div id=&quot;box&quot;&gt;대상 객체&lt;/div&gt;
+    &lt;span&gt;더미 객체&lt;/span&gt;
+&lt;/body&gt;
+&lt;/html&gt;" title="미션9-1 실행 결과"></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="m9-2">
+    <h2>미션9-2) display 속성 _ block 적용하기</h2>
+    <div class="pair">
+      <div class="panel">
+        <div class="bar">소스 코드</div>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS3 Display Property&lt;/title&gt;
+    &lt;style&gt;
+        #box {
+            display: block;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;span&gt;더미 객체&lt;/span&gt;
+    &lt;div id=&quot;box&quot;&gt;대상 객체&lt;/div&gt;
+    &lt;span&gt;더미 객체&lt;/span&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+      <div class="panel">
+        <div class="bar">실행 결과</div>
+        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS3 Display Property&lt;/title&gt;
+    &lt;style&gt;
+        #box {
+            display: block;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;span&gt;더미 객체&lt;/span&gt;
+    &lt;div id=&quot;box&quot;&gt;대상 객체&lt;/div&gt;
+    &lt;span&gt;더미 객체&lt;/span&gt;
+&lt;/body&gt;
+&lt;/html&gt;" title="미션9-2 실행 결과"></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="m10-1">
+    <h2>미션10-1) 요소의 고정 위치와 상대 위치 지정 _ absolute 키워드 적용하기</h2>
+    <div class="pair">
+      <div class="panel">
+        <div class="bar">소스 코드</div>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS3 Position Property&lt;/title&gt;
+    &lt;style&gt;
+        .box {
+            width: 100px; height: 100px;
+            position: absolute;
+        }
+        .box:nth-child(1) { background-color: red; }
+        .box:nth-child(2) { background-color: green; }
+        .box:nth-child(3) { background-color: blue; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+      <div class="panel">
+        <div class="bar">실행 결과</div>
+        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS3 Position Property&lt;/title&gt;
+    &lt;style&gt;
+        .box {
+            width: 100px; height: 100px;
+            position: absolute;
+        }
+        .box:nth-child(1) { background-color: red; }
+        .box:nth-child(2) { background-color: green; }
+        .box:nth-child(3) { background-color: blue; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;" title="미션10-1 실행 결과"></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="m10-2">
+    <h2>미션10-2) 요소의 고정 위치와 상대 위치 지정 _ left 속성과 top 속성 적용하기</h2>
+    <div class="pair">
+      <div class="panel">
+        <div class="bar">소스 코드</div>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS3 Position Property&lt;/title&gt;
+    &lt;style&gt;
+        .box {
+            width: 100px; height: 100px;
+            position: absolute;
+        }
+        .box:nth-child(1) {
+            background-color: red;
+            left: 10px; top: 10px;
+        }
+        .box:nth-child(2) {
+            background-color: green;
+            left: 50px; top: 50px;
+        }
+        .box:nth-child(3) {
+            background-color: blue;
+            left: 90px; top: 90px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+      <div class="panel">
+        <div class="bar">실행 결과</div>
+        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS3 Position Property&lt;/title&gt;
+    &lt;style&gt;
+        .box {
+            width: 100px; height: 100px;
+            position: absolute;
+        }
+        .box:nth-child(1) {
+            background-color: red;
+            left: 10px; top: 10px;
+        }
+        .box:nth-child(2) {
+            background-color: green;
+            left: 50px; top: 50px;
+        }
+        .box:nth-child(3) {
+            background-color: blue;
+            left: 90px; top: 90px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;" title="미션10-2 실행 결과"></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="m10-3">
+    <h2>미션10-3) 요소의 고정 위치와 상대 위치 지정 _ z-index 속성 적용하기</h2>
+    <div class="pair">
+      <div class="panel">
+        <div class="bar">소스 코드</div>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS3 Position Property&lt;/title&gt;
+    &lt;style&gt;
+        .box {
+            width: 100px; height: 100px;
+            position: absolute;
+        }
+        .box:nth-child(1) {
+            background-color: red;
+            left: 10px; top: 10px;
+            z-index: 100;
+        }
+        .box:nth-child(2) {
+            background-color: green;
+            left: 50px; top: 50px;
+            z-index: 10;
+        }
+        .box:nth-child(3) {
+            background-color: blue;
+            left: 90px; top: 90px;
+            z-index: 1;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+      <div class="panel">
+        <div class="bar">실행 결과</div>
+        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;CSS3 Position Property&lt;/title&gt;
+    &lt;style&gt;
+        .box {
+            width: 100px; height: 100px;
+            position: absolute;
+        }
+        .box:nth-child(1) {
+            background-color: red;
+            left: 10px; top: 10px;
+            z-index: 100;
+        }
+        .box:nth-child(2) {
+            background-color: green;
+            left: 50px; top: 50px;
+            z-index: 10;
+        }
+        .box:nth-child(3) {
+            background-color: blue;
+            left: 90px; top: 90px;
+            z-index: 1;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;" title="미션10-3 실행 결과"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+  // 결과 칸 높이를 내용에 맞추고, 결과 안의 링크는 새 탭에서 열리게 함
+  function fit(f) {
+    try {
+      var d = f.contentDocument;
+      if (!d || !d.body) return;
+      d.querySelectorAll('a[href]').forEach(function (a) {
+        if (!a.getAttribute('href').startsWith('#')) a.target = '_blank';
+      });
+      f.style.height = Math.max(220, d.documentElement.scrollHeight + 20) + 'px';
+    } catch (e) {}
+  }
+  document.querySelectorAll('iframe').forEach(function (f) {
+    f.addEventListener('load', function () { fit(f); });
+    fit(f);
+  });
+  window.addEventListener('load', function () {
+    document.querySelectorAll('iframe').forEach(fit);
+  });
+</script>
 </body>
 </html>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>CSS3 Display Property</title>
-    <style>
- #box {
-     display: none;
- }
-    </style>
-</head>
-<body>
-    <span>더미 객체</span>
-    <div id="box">대상 객체</div>
-    <span>더미 객체</span>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>CSS3 Display Property</title>
-    <style>
- #box {
-     display: none;
- }
-    </style>
-</head>
-<body>
-    <span>더미 객체</span>
-    <div id="box">대상 객체</div>
-    <span>더미 객체</span>
-</body>
-</html>
-<style>
-   #box {
-       display: block;
-   }
-</style>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>CSS3 Font Property</title>
-    <style>
-  .box {
- width: 100px; height: 100px;
- position: absolute;
- }
- .box:nth-child(1) { background-color: red; }
- .box:nth-child(2) { background-color: green; }
- .box:nth-child(3) { background-color: blue; }
-    </style>
-</head>
-<body>
-<div class="box"></div>
-<div class="box"></div>
-<div class="box"></div>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>CSS3 Font Property</title>
-    <style>
-  .box {
- width: 100px; height: 100px;
- position: absolute;
- }
- .box:nth-child(1) { background-color: red; }
- .box:nth-child(2) { background-color: green; }
- .box:nth-child(3) { background-color: blue; }
-    </style>
-</head>
-<body>
-<div class="box"></div>
-<div class="box"></div>
-<div class="box"></div>
-</body>
-</html>
-<style>
-.box {
- width: 100px; height: 100px;
- position: absolute;
-}
-.box:nth-child(1) {
- background-color: red;
- left: 10px; top: 10px;
-}
-.box:nth-child(2) {
- background-color: green;
- left: 50px; top: 50px;
-}
-.box:nth-child(3) {
- background-color: blue;
- left: 90px; top: 90px;
-}
-</style>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>CSS3 Font Property</title>
-    <style>
-  .box {
- width: 100px; height: 100px;
- position: absolute;
- }
- .box:nth-child(1) { background-color: red; }
- .box:nth-child(2) { background-color: green; }
- .box:nth-child(3) { background-color: blue; }
-    </style>
-</head>
-<body>
-<div class="box"></div>
-<div class="box"></div>
-<div class="box"></div>
-</body>
-</html>
-<style>
-.box {
- width: 100px; height: 100px;
- position: absolute;
-}
-.box:nth-child(1) {
- background-color: red;
- left: 10px; top: 10px;
-}
-.box:nth-child(2) {
- background-color: green;
- left: 50px; top: 50px;
-}
-.box:nth-child(3) {
- background-color: blue;
- left: 90px; top: 90px;
-}
-</style>
-
-<style>
-.box {
- width: 100px; height: 100px;
- position: absolute;
-}
-.box:nth-child(1) {
- background-color: red;
- left: 10px; top: 10px;
- z-index: 100;
-}
-.box:nth-child(2) {
- background-color: green;
- left: 50px; top: 50px;
- z-index: 10;
-
-}
-.box:nth-child(3) {
- background-color: blue;
- left: 90px; top: 90px;
- z-index: 1;
-}
-</style>
-
