@@ -1,1 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>웹개발 7주차 과제</title>
+  <style>
+    :root { --line:#d0d7de; --bar:#f6f8fa; --ink:#1f2328; --sub:#59636e; --accent:#04aa6d; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:#fff; color:var(--ink);
+      font-family: "Pretendard", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; line-height:1.6; }
+    main { max-width:1200px; margin:0 auto; padding:32px 16px 80px; }
+    header.cover { border-bottom:2px solid var(--ink); padding-bottom:20px; margin-bottom:28px; }
+    header.cover h1 { margin:0 0 6px; font-size:28px; }
+    header.cover p { margin:0; color:var(--sub); }
+    nav h2 { font-size:18px; margin:0 0 8px; }
+    nav ol { margin:0 0 40px; padding-left:20px; columns:2; column-gap:32px; }
+    nav a { color:var(--ink); }
+    section { margin:0 0 48px; scroll-margin-top:16px; }
+    section h2 { font-size:18px; margin:0 0 10px; padding-left:10px; border-left:4px solid var(--accent); }
+    .pair { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .panel { border:1px solid var(--line); border-radius:6px; overflow:hidden; display:flex; flex-direction:column; min-width:0; }
+    .bar { background:var(--bar); border-bottom:1px solid var(--line); padding:6px 12px; font-size:13px;
+      color:var(--sub); display:flex; justify-content:space-between; }
+    .bar a { color:var(--sub); }
+    pre { margin:0; padding:12px; overflow:auto; font-size:13px; line-height:1.5; flex:1;
+      font-family: Consolas, "D2Coding", monospace; background:#fff; }
+    iframe { width:100%; min-height:220px; border:0; flex:1; background:#fff; }
+    @media (max-width: 760px) { .pair { grid-template-columns:1fr; } nav ol { columns:1; } }
+  </style>
+</head>
+<body>
+<main>
+  <header class="cover">
+    <h1>웹개발 7주차 과제</h1>
+    <p>빅데이터학과 2601926 김세란</p>
+  </header>
+  <nav>
+    <h2>목차</h2>
+    <ol>
+      <li><a href="#m1">미션1) form 태그 _ 검색창 만들기</a></li>
+      <li><a href="#m2">미션2) input 태그의 type 속성</a></li>
+    </ol>
+  </nav>
+  <section id="m1">
+    <h2>미션1) form 태그 _ 검색창 만들기</h2>
+    <div class="pair">
+      <div class="panel">
+        <div class="bar">소스 코드</div>
+        <pre><code>&lt;body&gt;
+    &lt;form&gt;
+        &lt;input type = "text" name="search"&gt;
+        &lt;input type = "submit"&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
 
+
+&lt;html&gt;
+&lt;head&gt;
+  안녕하시오까
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;form&gt;
+     &lt;input type = "text" name="search"&gt;
+     &lt;input type = "submit"&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+      </div>
+      <div class="panel">
+        <div class="bar">실행 결과</div>
+        <iframe srcdoc="&lt;body&gt;
+    &lt;form&gt;
+        &lt;input type = &quot;text&quot; name=&quot;search&quot;&gt;
+        &lt;input type = &quot;submit&quot;&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+
+
+&lt;html&gt;
+&lt;head&gt;
+  안녕하시오까
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;form&gt;
+     &lt;input type = &quot;text&quot; name=&quot;search&quot;&gt;
+     &lt;input type = &quot;submit&quot;&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;" title="미션1) 실행 결과"></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="m2">
+    <h2>미션2) input 태그의 type 속성</h2>
+    <div class="pair">
+      <div class="panel">
+        <div class="bar">소스 코드</div>
+        <pre><code>&lt;body&gt;
+    &lt;form&gt;
+        &lt;!-- 사용자가 입력하는 입력 양식 --&gt;
+        &lt;input type="text" name="text" value="text"&gt;&lt;br&gt;
+        &lt;input type="password" name="password" value="password"&gt;&lt;br&gt;
+        &lt;input type="file" name="file" value="file"&gt;&lt;br&gt;
+        &lt;input type="checkbox" name="checkbox" value="checkbox"&gt;&lt;br&gt;
+        &lt;input type="radio" name="radio" value="radio"&gt;&lt;br&gt;
+
+        &lt;!-- 보이지 않는 입력 양식 --&gt;
+        &lt;input type="hidden" name="hidden" value="hidden"&gt;&lt;br&gt;
+
+        &lt;!-- 버튼 --&gt;
+        &lt;input type="button" value="button"&gt;&lt;br&gt;
+        &lt;input type="reset" value="reset"&gt;&lt;br&gt;
+        &lt;input type="submit" value="submit"&gt;&lt;br&gt;
+        &lt;input type="image" src="http://via.placeholder.com/100x100"&gt;
+    &lt;/form&gt;
+&lt;/body&gt;</code></pre>
+      </div>
+      <div class="panel">
+        <div class="bar">실행 결과</div>
+        <iframe srcdoc="&lt;body&gt;
+    &lt;form&gt;
+        &lt;!-- 사용자가 입력하는 입력 양식 --&gt;
+        &lt;input type=&quot;text&quot; name=&quot;text&quot; value=&quot;text&quot;&gt;&lt;br&gt;
+        &lt;input type=&quot;password&quot; name=&quot;password&quot; value=&quot;password&quot;&gt;&lt;br&gt;
+        &lt;input type=&quot;file&quot; name=&quot;file&quot; value=&quot;file&quot;&gt;&lt;br&gt;
+        &lt;input type=&quot;checkbox&quot; name=&quot;checkbox&quot; value=&quot;checkbox&quot;&gt;&lt;br&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;radio&quot; value=&quot;radio&quot;&gt;&lt;br&gt;
+
+        &lt;!-- 보이지 않는 입력 양식 --&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;hidden&quot; value=&quot;hidden&quot;&gt;&lt;br&gt;
+
+        &lt;!-- 버튼 --&gt;
+        &lt;input type=&quot;button&quot; value=&quot;button&quot;&gt;&lt;br&gt;
+        &lt;input type=&quot;reset&quot; value=&quot;reset&quot;&gt;&lt;br&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;submit&quot;&gt;&lt;br&gt;
+        &lt;input type=&quot;image&quot; src=&quot;http://via.placeholder.com/100x100&quot;&gt;
+    &lt;/form&gt;
+&lt;/body&gt;" title="미션2) 실행 결과"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+  // 결과 칸 높이를 내용에 맞추고, 결과 안의 링크는 새 탭에서 열리게 함
+  function fit(f) {
+    try {
+      var d = f.contentDocument;
+      if (!d || !d.body) return;
+      d.querySelectorAll('a[href]').forEach(function (a) {
+        if (!a.getAttribute('href').startsWith('#')) a.target = '_blank';
+      });
+      f.style.height = Math.max(220, d.documentElement.scrollHeight + 20) + 'px';
+    } catch (e) {}
+  }
+  document.querySelectorAll('iframe').forEach(function (f) {
+    f.addEventListener('load', function () { fit(f); });
+    fit(f);
+  });
+  window.addEventListener('load', function () {
+    document.querySelectorAll('iframe').forEach(fit);
+  });
+</script>
+</body>
+</html>
