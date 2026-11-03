@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>새벽오븐 베이커리</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="lab-note">
+    🔧 이 페이지는 책 『브라우저는 개발 툴이다』의 <b>실습용으로 일부러 고장 낸</b> 페이지예요.
+    <a href="fixed/">고친 버전 보기 →</a>
+  </div>
+
+  <header class="hero">
+    <img src="images/hero.png" class="hero-bg">
+    <div class="hero-text">
+      <p class="eyebrow">SINCE 2026 · 성수동</p>
+      <h1>새벽오븐 베이커리</h1>
+      <p class="tagline">매일 새벽 5시, 오늘 먹을 빵만 굽습니다</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="menu">
+      <h2>오늘의 빵</h2>
+      <div id="menu-list" class="menu-list">
+        <!-- app.js가 data/menu.json을 불러와서 여기에 카드를 그려요 -->
+      </div>
+    </section>
+
+    <aside class="cart">
+      <h2>🧺 장바구니</h2>
+      <ul id="cart-list"></ul>
+      <p class="total">합계 <strong id="cart-total">0원</strong></p>
+      <div class="cart-buttons">
+        <button id="clear-btn" class="ghost">비우기</button>
+        <button id="order-btn">주문하기</button>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <p>새벽오븐 베이커리 · 실습용 가상 가게 · 영업시간 07:00–20:00</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>새벽오븐 베이커리</title>
+  <meta name="description" content="매일 새벽 5시에 굽는 성수동 동네 빵집, 새벽오븐 베이커리의 오늘의 빵 메뉴와 장바구니">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="lab-note">
+    ✅ 이 페이지는 책 『브라우저는 개발 툴이다』에서 <b>문제를 모두 고친</b> 버전이에요.
+    <a href="../">← 고장 난 버전 보기</a>
+  </div>
+
+  <header class="hero">
+    <img src="images/hero.webp" class="hero-bg" alt="" width="1200" height="660" fetchpriority="high">
+    <div class="hero-text">
+      <p class="eyebrow">SINCE 2026 · 성수동</p>
+      <h1>새벽오븐 베이커리</h1>
+      <p class="tagline">매일 새벽 5시, 오늘 먹을 빵만 굽습니다</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="menu">
+      <h2>오늘의 빵</h2>
+      <div id="menu-list" class="menu-list">
+        <!-- 고침: 카드를 미리 그려 두어 menu.json이 늦게 와도 화면이 밀리지 않아요(CLS) -->
+    <article class="card">
+      <img src="images/croissant.webp" alt="버터 크루아상" width="400" height="300" loading="lazy">
+      <div class="card-body">
+        <div class="card-title">
+          <h3>버터 크루아상</h3>
+          <span class="badge">인기</span>
+        </div>
+        <p class="desc">프랑스산 버터로 27겹을 접었어요</p>
+        <p class="price">3,200원</p>
+        <button class="add-btn" data-name="버터 크루아상" data-price="3200">담기</button>
+      </div>
+    </article>
+    <article class="card">
+      <img src="images/baguette.webp" alt="전통 바게트" width="400" height="300" loading="lazy">
+      <div class="card-body">
+        <div class="card-title">
+          <h3>전통 바게트</h3>
+          
+        </div>
+        <p class="desc">밀가루, 물, 소금, 효모만 넣었어요</p>
+        <p class="price">3,800원</p>
+        <button class="add-btn" data-name="전통 바게트" data-price="3800">담기</button>
+      </div>
+    </article>
+    <article class="card">
+      <img src="images/salt-bread.webp" alt="소금빵" width="400" height="300" loading="lazy">
+      <div class="card-body">
+        <div class="card-title">
+          <h3>소금빵</h3>
+          <span class="badge">오늘 구움</span>
+        </div>
+        <p class="desc">겉은 바삭, 속은 버터가 촉촉해요</p>
+        <p class="price">2,800원</p>
+        <button class="add-btn" data-name="소금빵" data-price="2800">담기</button>
+      </div>
+    </article>
+    <article class="card">
+      <img src="images/muffin.webp" alt="블루베리 머핀" width="400" height="300" loading="lazy">
+      <div class="card-body">
+        <div class="card-title">
+          <h3>블루베리 머핀</h3>
+          
+        </div>
+        <p class="desc">생 블루베리가 듬뿍 들어갔어요</p>
+        <p class="price">3,500원</p>
+        <button class="add-btn" data-name="블루베리 머핀" data-price="3500">담기</button>
+      </div>
+    </article>
+    <article class="card">
+      <img src="images/bagel.webp" alt="플레인 베이글" width="400" height="300" loading="lazy">
+      <div class="card-body">
+        <div class="card-title">
+          <h3>플레인 베이글</h3>
+          
+        </div>
+        <p class="desc">쫄깃한 식감, 크림치즈와 잘 어울려요</p>
+        <p class="price">3,000원</p>
+        <button class="add-btn" data-name="플레인 베이글" data-price="3000">담기</button>
+      </div>
+    </article>
+    <article class="card">
+      <img src="images/milk-loaf.webp" alt="우유 식빵" width="400" height="300" loading="lazy">
+      <div class="card-body">
+        <div class="card-title">
+          <h3>우유 식빵</h3>
+          <span class="badge">오늘 구움</span>
+        </div>
+        <p class="desc">우유로만 반죽해 결이 부드러워요</p>
+        <p class="price">4,500원</p>
+        <button class="add-btn" data-name="우유 식빵" data-price="4500">담기</button>
+      </div>
+    </article>
+      </div>
+    </section>
+
+    <aside class="cart">
+      <h2>🧺 장바구니</h2>
+      <ul id="cart-list"></ul>
+      <p id="order-msg" class="order-msg" role="status"></p>
+      <p class="total">합계 <strong id="cart-total">0원</strong></p>
+      <div class="cart-buttons">
+        <button id="clear-btn" class="ghost">비우기</button>
+        <button id="order-btn">주문하기</button>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <p>새벽오븐 베이커리 · 실습용 가상 가게 · 영업시간 07:00–20:00</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+[
+  { "id": "croissant",  "name": "버터 크루아상",  "price": 3200, "desc": "프랑스산 버터로 27겹을 접었어요", "image": "images/croissant.webp",  "badge": "인기" },
+  { "id": "baguette",   "name": "전통 바게트",    "price": 3800, "desc": "밀가루, 물, 소금, 효모만 넣었어요", "image": "images/baguette.webp",   "badge": "" },
+  { "id": "salt-bread", "name": "소금빵",        "price": 2800, "desc": "겉은 바삭, 속은 버터가 촉촉해요",   "image": "images/salt-bread.webp",  "badge": "오늘 구움" },
+  { "id": "muffin",     "name": "블루베리 머핀",  "price": 3500, "desc": "생 블루베리가 듬뿍 들어갔어요",     "image": "images/muffin.webp",     "badge": "" },
+  { "id": "bagel",      "name": "플레인 베이글",  "price": 3000, "desc": "쫄깃한 식감, 크림치즈와 잘 어울려요", "image": "images/bagel.webp",      "badge": "" },
+  { "id": "milk-loaf",  "name": "우유 식빵",      "price": 4500, "desc": "우유로만 반죽해 결이 부드러워요",   "image": "images/milk-loaf.webp",  "badge": "오늘 구움" }
+]
